@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TikTok Shop AI Master — 130 prompts de IA para criar conteúdo e vender na TikTok Shop</title>
+<meta name="description" content="130 prompts prontos de inteligência artificial para encontrar produtos, criar roteiros, gerar imagens e produzir conteúdo para TikTok Shop em uma fração do tempo.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0B0D17; --ink-2:#131A33; --ink-3:#1E2542;
+  --violet:#6C4CE0; --violet-soft:#8F76F0;
+  --mint:#7EE0D2; --gold:#F2B33D;
+  --paper:#F5F4F9; --slate:#6F7A99; --slate-dark:#4A5570;
+  --line:rgba(255,255,255,.10); --line-dark:rgba(11,13,23,.12);
+  --display:'Space Grotesk',system-ui,sans-serif;
+  --body:'IBM Plex Sans',system-ui,sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,monospace;
+  --wrap:1120px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);background:var(--ink);color:#EAECF5;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+h1,h2,h3,h4{font-family:var(--display);font-weight:700;line-height:1.12;letter-spacing:-.02em}
+h1{font-size:clamp(2.4rem,6vw,4.05rem)}
+h2{font-size:clamp(1.95rem,4vw,2.95rem)}
+h3{font-size:1.16rem;letter-spacing:-.01em}
+p{color:#B9C0D6}
+.eyebrow{font-family:var(--mono);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--mint);margin-bottom:20px;display:block}
+.eyebrow.dark{color:var(--violet)}
+.lead{font-size:clamp(1.02rem,1.6vw,1.2rem);color:#AAB3CC;max-width:58ch}
+a{color:var(--mint)}
+.hl{color:var(--violet-soft)}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--display);font-weight:600;font-size:1.02rem;padding:17px 34px;border-radius:10px;border:0;cursor:pointer;text-decoration:none;transition:transform .18s ease,box-shadow .18s ease,background .18s ease}
+.btn-primary{background:var(--violet);color:#fff;box-shadow:0 8px 30px rgba(108,76,224,.36)}
+.btn-primary:hover{background:var(--violet-soft);transform:translateY(-2px);box-shadow:0 14px 40px rgba(108,76,224,.46)}
+.btn-big{font-size:1.12rem;padding:21px 46px}
+.btn-ghost{background:transparent;color:#EAECF5;border:1px solid var(--line)}
+.btn-ghost:hover{border-color:var(--mint);color:var(--mint)}
+.btn:focus-visible{outline:3px solid var(--mint);outline-offset:3px}
+
+.hero{padding:60px 0 92px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:-30% -10% auto -10%;height:900px;background:radial-gradient(ellipse 50% 42% at 22% 20%,rgba(108,76,224,.32),transparent 60%),radial-gradient(ellipse 40% 38% at 84% 8%,rgba(126,224,210,.13),transparent 62%);pointer-events:none}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:24px 0 58px;position:relative;z-index:2}
+.logo{font-family:var(--display);font-weight:700;font-size:1.02rem;color:#fff;text-decoration:none}
+.logo span{color:var(--violet-soft)}
+.nav-links{display:flex;gap:28px}
+.nav-links a{color:#9AA3BE;text-decoration:none;font-size:.9rem;transition:color .15s}
+.nav-links a:hover{color:#fff}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:54px;align-items:start;position:relative;z-index:2}
+.badge{display:inline-flex;align-items:center;gap:9px;font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(242,179,61,.35);background:rgba(242,179,61,.09);padding:7px 14px;border-radius:30px;margin-bottom:24px}
+.hero .lead{margin:26px 0 32px}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.tick{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:24px}
+.tick span{font-family:var(--mono);font-size:.76rem;color:#9AA3BE;display:flex;align-items:center;gap:8px}
+.tick span::before{content:'';width:7px;height:7px;border-radius:2px;background:var(--mint)}
+.specs{display:flex;gap:34px;margin-top:40px;padding-top:28px;border-top:1px solid var(--line);flex-wrap:wrap}
+.spec-n{font-family:var(--display);font-size:1.7rem;font-weight:700;color:#fff;display:block;line-height:1}
+.spec-l{font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--slate);margin-top:7px;display:block}
+
+.viewer{background:linear-gradient(168deg,#151C36,#0E1226);border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 28px 70px rgba(0,0,0,.5)}
+.viewer-top{display:flex;align-items:center;gap:9px;padding:14px 18px;border-bottom:1px solid var(--line);background:rgba(255,255,255,.02)}
+.dot{width:9px;height:9px;border-radius:50%;background:#3A4261}
+.viewer-title{font-family:var(--mono);font-size:.72rem;color:var(--slate);margin-left:8px}
+.tabs{display:flex;border-bottom:1px solid var(--line);overflow-x:auto;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab{font-family:var(--mono);font-size:.72rem;padding:13px 17px;background:none;border:0;border-bottom:2px solid transparent;color:var(--slate);cursor:pointer;white-space:nowrap;transition:.15s}
+.tab:hover{color:#C7CDE2}
+.tab[aria-selected="true"]{color:var(--mint);border-bottom-color:var(--mint)}
+.tab:focus-visible{outline:2px solid var(--mint);outline-offset:-2px}
+.panel{padding:24px 22px 22px;display:none}
+.panel.on{display:block;animation:fade .3s ease}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.p-num{font-family:var(--mono);font-size:.72rem;color:var(--violet-soft);letter-spacing:.1em}
+.p-name{font-family:var(--display);font-size:1.28rem;color:#fff;margin:5px 0 16px;font-weight:600}
+.p-meta{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:18px}
+.chip{font-family:var(--mono);font-size:.66rem;padding:4px 10px;border-radius:20px;border:1px solid var(--line);color:#9AA3BE}
+.chip.mint{border-color:rgba(126,224,210,.4);color:var(--mint)}
+.p-code{font-family:var(--mono);font-size:.755rem;line-height:1.72;background:#080B16;border:1px solid rgba(255,255,255,.07);border-left:3px solid var(--violet);border-radius:8px;padding:16px 15px;color:#C3CBE0;white-space:pre-wrap;max-height:290px;overflow-y:auto}
+.p-code::-webkit-scrollbar{width:6px}
+.p-code::-webkit-scrollbar-thumb{background:#2A3252;border-radius:3px}
+.p-foot{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:15px;flex-wrap:wrap}
+.p-hint{font-family:var(--mono);font-size:.68rem;color:var(--slate)}
+.preview-tag{font-family:var(--mono);font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:var(--slate);border:1px solid var(--line);padding:5px 11px;border-radius:20px}
+.p-code{position:relative}
+.p-code::after{content:'';position:absolute;left:0;right:0;bottom:0;height:38px;background:linear-gradient(transparent,#080B16);pointer-events:none;border-radius:0 0 8px 8px}
+
+.pain{padding:92px 0;background:var(--paper);color:var(--ink)}
+.pain h2{color:var(--ink)}
+.pain .lead{color:var(--slate-dark)}
+.pain-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:46px}
+.pain-card{background:#fff;border:1px solid var(--line-dark);border-radius:12px;padding:26px 24px}
+.pain-q{font-family:var(--display);font-size:1.05rem;font-weight:600;color:var(--ink);margin-bottom:9px;line-height:1.3}
+.pain-a{font-size:.9rem;color:var(--slate-dark);line-height:1.6}
+.pain-turn{margin-top:44px;padding:30px 32px;background:var(--ink);border-radius:14px;text-align:center}
+.pain-turn p{font-family:var(--display);font-size:clamp(1.15rem,2.4vw,1.5rem);color:#fff;font-weight:500;line-height:1.4;max-width:52ch;margin:0 auto}
+
+.shift{padding:96px 0}
+.shift-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:44px}
+.col{border:1px solid var(--line);border-radius:14px;padding:32px 30px}
+.col.before{background:rgba(255,255,255,.02)}
+.col.after{background:linear-gradient(160deg,rgba(108,76,224,.16),rgba(108,76,224,.04));border-color:rgba(108,76,224,.42)}
+.col-tag{font-family:var(--mono);font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;margin-bottom:20px;display:block}
+.col.before .col-tag{color:var(--slate)}
+.col.after .col-tag{color:var(--mint)}
+.col ul{list-style:none}
+.col li{font-size:.97rem;padding:11px 0 11px 26px;position:relative;border-bottom:1px solid var(--line)}
+.col li:last-child{border-bottom:0}
+.col.before li{color:#8B94AF}
+.col.before li::before{content:'—';position:absolute;left:0;color:#525C79;font-family:var(--mono)}
+.col.after li{color:#DDE2F0}
+.col.after li::before{content:'→';position:absolute;left:0;color:var(--violet-soft);font-family:var(--mono)}
+
+.modules{padding:100px 0;background:linear-gradient(180deg,transparent,rgba(108,76,224,.06),transparent)}
+.mod-head{max-width:62ch;margin-bottom:50px}
+.mod-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.mod{background:linear-gradient(160deg,rgba(255,255,255,.045),rgba(255,255,255,.012));border:1px solid var(--line);border-radius:12px;padding:24px 22px;transition:border-color .2s,transform .2s}
+.mod:hover{border-color:rgba(108,76,224,.55);transform:translateY(-3px)}
+.mod-top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:12px;gap:10px}
+.mod-n{font-family:var(--mono);font-size:.7rem;color:var(--violet-soft);letter-spacing:.1em}
+.mod-c{font-family:var(--mono);font-size:.66rem;color:var(--slate)}
+.mod h3{color:#fff;margin-bottom:9px;font-size:1.05rem}
+.mod p{font-size:.88rem;color:#98A1BB;line-height:1.62}
+
+.flow{padding:92px 0}
+.flow-head{max-width:60ch;margin-bottom:46px}
+.steps{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+.step{position:relative;padding-top:26px;border-top:2px solid var(--violet)}
+.step-n{font-family:var(--mono);font-size:.66rem;color:var(--slate);position:absolute;top:-9px;left:0;background:var(--ink);padding-right:9px}
+.step h4{font-family:var(--display);font-size:.95rem;color:#fff;margin-bottom:6px}
+.step p{font-size:.8rem;color:#8B94AF;line-height:1.55}
+.flow-loop{font-family:var(--mono);font-size:.74rem;color:var(--mint);margin-top:32px;padding:14px 18px;border:1px dashed rgba(126,224,210,.34);border-radius:9px;display:inline-block}
+
+.fit{padding:92px 0;background:var(--paper);color:var(--ink)}
+.fit h2{color:var(--ink)}
+.fit-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:44px}
+.fit-card{background:#fff;border:1px solid var(--line-dark);border-radius:12px;padding:26px 24px;border-top:3px solid var(--violet)}
+.fit-card h3{color:var(--ink);margin-bottom:10px;font-size:1.04rem}
+.fit-card p{font-size:.9rem;color:var(--slate-dark);line-height:1.6}
+
+.deliver{padding:96px 0}
+.d-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:46px}
+.d-item{background:linear-gradient(160deg,rgba(255,255,255,.045),rgba(255,255,255,.012));border:1px solid var(--line);border-radius:12px;padding:26px 22px}
+.d-n{font-family:var(--display);font-size:2.2rem;font-weight:700;color:var(--violet-soft);line-height:1}
+.d-t{font-family:var(--display);font-size:1rem;color:#fff;margin:10px 0 6px;font-weight:600}
+.d-d{font-size:.86rem;color:#98A1BB;line-height:1.58}
+
+.faq{padding:92px 0;background:linear-gradient(180deg,transparent,rgba(108,76,224,.06),transparent)}
+.faq-list{margin-top:40px;border-top:1px solid var(--line)}
+details{border-bottom:1px solid var(--line)}
+summary{font-family:var(--display);font-size:1.04rem;font-weight:500;color:#fff;padding:22px 40px 22px 0;cursor:pointer;list-style:none;position:relative}
+summary::-webkit-details-marker{display:none}
+summary::after{content:'+';position:absolute;right:6px;top:19px;font-family:var(--mono);font-size:1.3rem;color:var(--violet-soft)}
+details[open] summary::after{content:'−'}
+summary:focus-visible{outline:2px solid var(--mint);outline-offset:3px}
+details p{padding:0 0 24px;font-size:.95rem;max-width:74ch}
+
+.final{padding:100px 0 108px;text-align:center;position:relative;overflow:hidden}
+.final::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 48% 62% at 50% 45%,rgba(108,76,224,.28),transparent 65%);pointer-events:none}
+.final-inner{position:relative;z-index:2;max-width:680px;margin:0 auto}
+.final h2{margin-bottom:20px}
+.final .lead{margin:0 auto 36px}
+.offer{border:1px solid rgba(108,76,224,.42);background:linear-gradient(165deg,rgba(108,76,224,.14),rgba(255,255,255,.02));border-radius:16px;padding:38px 34px;margin-bottom:30px}
+.offer-list{list-style:none;text-align:left;max-width:400px;margin:0 auto 28px}
+.offer-list li{font-size:.95rem;color:#DDE2F0;padding:9px 0 9px 26px;position:relative}
+.offer-list li::before{content:'✓';position:absolute;left:0;color:var(--mint);font-family:var(--mono);font-weight:700}
+.price-old{font-family:var(--mono);font-size:1.15rem;color:#98A1BB;text-decoration:line-through;text-decoration-color:#D3455B;display:block;margin-bottom:2px}
+.save-badge{display:inline-block;font-family:var(--mono);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:#0B0D17;background:var(--gold);padding:4px 12px;border-radius:20px;margin-bottom:14px;font-weight:600}
+.price-v{font-family:var(--display);font-size:3.1rem;font-weight:700;color:#fff;line-height:1;display:block}
+.price-cents{font-size:1.7rem;vertical-align:super}
+.price-l{font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--slate);margin-top:10px;display:block}
+.price-pill{display:inline-block;font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:#0B0D17;background:var(--mint);padding:5px 13px;border-radius:20px;margin-bottom:16px;font-weight:600}
+.anchor{margin:0 auto 24px;max-width:420px}
+.anchor-row{display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px dashed var(--line);font-size:.9rem}
+.anchor-row span:first-child{color:#AAB3CC}
+.anchor-row span:last-child{font-family:var(--mono);color:var(--slate);text-decoration:line-through}
+.anchor-row.win span:first-child{color:#fff;font-family:var(--display);font-weight:600}
+.anchor-row.win span:last-child{color:var(--mint);text-decoration:none;font-weight:600}
+.coffee{font-family:var(--display);font-size:1.15rem;color:#fff;font-weight:500;line-height:1.4;max-width:44ch;margin:0 auto 8px}
+.coffee b{color:var(--mint)}
+.microcopy{font-family:var(--mono);font-size:.72rem;color:var(--slate);margin-top:16px;line-height:1.7}
+.guar{display:inline-flex;align-items:center;gap:11px;margin-top:26px;padding:13px 22px;border:1px solid var(--line);border-radius:30px;font-size:.86rem;color:#AAB3CC}
+.guar strong{color:#fff;font-family:var(--display)}
+
+footer{border-top:1px solid var(--line);padding:34px 0 90px;text-align:center}
+footer p{font-size:.78rem;color:var(--slate);max-width:78ch;margin:0 auto 9px;line-height:1.6}
+
+.edit{border-bottom:1px dashed rgba(126,224,210,.5);cursor:help}
+.rv{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease}
+.rv.in{opacity:1;transform:none}
+
+/* barra fixa de compra */
+.stickybar{position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(11,13,23,.94);backdrop-filter:blur(12px);border-top:1px solid rgba(108,76,224,.4);padding:13px 0;transform:translateY(120%);transition:transform .35s ease}
+.stickybar.show{transform:none}
+.stickybar .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.sb-info{display:flex;flex-direction:column}
+.sb-t{font-family:var(--display);font-weight:600;color:#fff;font-size:.98rem;line-height:1.2}
+.sb-p{font-family:var(--mono);font-size:.76rem;color:var(--mint)}
+.sb-btn{white-space:nowrap;padding:13px 26px;font-size:.95rem}
+@media(max-width:600px){.sb-t{font-size:.86rem}.sb-info .sb-sub{display:none}.sb-btn{padding:12px 18px;font-size:.86rem}}
+
+/* faixa de CTA intermediária */
+.ctaband{padding:64px 0;text-align:center;background:linear-gradient(150deg,rgba(108,76,224,.18),rgba(126,224,210,.06));border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.ctaband h3{font-size:clamp(1.5rem,3vw,2.1rem);color:#fff;margin-bottom:12px;max-width:24ch;margin-left:auto;margin-right:auto}
+.ctaband p{color:#B9C0D6;margin-bottom:26px;max-width:48ch;margin-left:auto;margin-right:auto}
+.ctaband .price-inline{font-family:var(--mono);font-size:.8rem;color:var(--mint);margin-top:16px;display:block}
+
+/* banda de números / prova */
+.proof{padding:70px 0;border-top:1px solid var(--line)}
+.proof-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
+.proof-n{font-family:var(--display);font-size:clamp(2rem,4vw,2.9rem);font-weight:700;color:var(--violet-soft);line-height:1}
+.proof-l{font-family:var(--body);font-size:.88rem;color:#98A1BB;margin-top:8px;line-height:1.4}
+@media(max-width:600px){.proof-grid{grid-template-columns:1fr 1fr;gap:28px 16px}}
+
+/* seção resultado / o que você consegue */
+.result{padding:96px 0;background:var(--paper);color:var(--ink)}
+.result h2{color:var(--ink)}
+.result-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:44px}
+.res-card{background:#fff;border:1px solid var(--line-dark);border-radius:12px;padding:26px 26px;display:flex;gap:18px;align-items:flex-start}
+.res-ico{flex:0 0 42px;width:42px;height:42px;border-radius:10px;background:linear-gradient(150deg,var(--violet),var(--violet-soft));display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:700;color:#fff;font-size:1.1rem}
+.res-card h3{color:var(--ink);font-size:1.04rem;margin-bottom:6px}
+.res-card p{font-size:.9rem;color:var(--slate-dark);line-height:1.55}
+@media(max-width:600px){.result-grid{grid-template-columns:1fr}}
+
+/* garantia destaque */
+.gbox{padding:80px 0}
+.gbox-inner{max-width:760px;margin:0 auto;text-align:center;border:1px solid rgba(126,224,210,.3);background:linear-gradient(160deg,rgba(126,224,210,.08),rgba(255,255,255,.01));border-radius:18px;padding:44px 40px}
+.gbox-seal{width:74px;height:74px;border-radius:50%;border:2px solid var(--mint);display:flex;align-items:center;justify-content:center;margin:0 auto 22px;font-family:var(--display);font-weight:700;color:var(--mint);font-size:1.5rem}
+.gbox h2{font-size:clamp(1.6rem,3vw,2.2rem);color:#fff;margin-bottom:14px}
+.gbox p{color:#B9C0D6;max-width:52ch;margin:0 auto}
+
+@media(max-width:940px){
+  .hero-grid{grid-template-columns:1fr;gap:44px}
+  .pain-grid,.mod-grid,.fit-grid{grid-template-columns:repeat(2,1fr)}
+  .steps{grid-template-columns:repeat(3,1fr);gap:22px 12px}
+  .d-grid{grid-template-columns:repeat(2,1fr)}
+  .shift-grid{grid-template-columns:1fr}
+  .nav-links{display:none}
+}
+@media(max-width:600px){
+  .hero{padding:36px 0 68px}
+  .nav{padding:20px 0 40px}
+  .pain-grid,.mod-grid,.fit-grid{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr 1fr}
+  .d-grid{grid-template-columns:1fr 1fr}
+  .btn{width:100%}
+  .offer{padding:30px 22px}
+  .pain,.shift,.modules,.flow,.fit,.deliver,.faq,.final{padding:64px 0}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .rv{opacity:1;transform:none}
+  html{scroll-behavior:auto}
+}
+
+/* Mobile optimizations */
+html,body{max-width:100vw;overflow-x:hidden}
+.wrap{padding-left:20px;padding-right:20px}
+
+@media (max-width:600px){
+  .nav{padding:16px 0 28px;gap:10px}
+  .nav .btn-ghost{padding:9px 14px !important;font-size:.78rem !important}
+  .logo{font-size:.92rem}
+
+  .hero{padding:24px 0 56px}
+  .hero-grid{gap:32px}
+  h1{font-size:clamp(2rem,8.5vw,2.6rem);line-height:1.1}
+  .hero .lead{font-size:.98rem;margin:20px 0 26px}
+  .badge{font-size:.62rem;padding:6px 11px;letter-spacing:.08em;margin-bottom:18px}
+  .hero-cta{flex-direction:column;align-items:stretch;gap:10px}
+  .btn-big{font-size:1rem;padding:16px 20px}
+  .tick{gap:6px 14px;margin-top:18px}
+  .tick span{font-size:.7rem}
+  .specs{gap:18px 22px;margin-top:28px;padding-top:22px}
+  .spec-n{font-size:1.35rem}
+  .spec-l{font-size:.6rem;letter-spacing:.1em}
+
+  .viewer{border-radius:12px}
+  .viewer-top{padding:11px 14px}
+  .viewer-title{font-size:.66rem;margin-left:4px}
+  .tabs{overflow-x:auto}
+  .tab{font-size:.66rem;padding:11px 12px}
+  .panel{padding:18px 16px 16px}
+  .p-name{font-size:1.05rem;margin:4px 0 12px}
+  .p-meta{gap:6px;margin-bottom:14px}
+  .chip{font-size:.6rem;padding:3px 8px}
+  .p-code{font-size:.68rem;line-height:1.6;padding:14px 12px;max-height:240px}
+  .p-hint,.preview-tag{font-size:.6rem}
+
+  .proof{padding:52px 0}
+  .proof-grid{gap:24px 14px}
+  .proof-n{font-size:1.7rem}
+  .proof-l{font-size:.78rem}
+
+  h2{font-size:clamp(1.7rem,6.5vw,2.1rem)}
+  .lead{font-size:.95rem}
+
+  .pain-card{padding:22px 20px}
+  .pain-q{font-size:1rem}
+  .pain-a{font-size:.86rem}
+  .pain-turn{padding:24px 22px;margin-top:32px}
+  .pain-turn p{font-size:1rem}
+
+  .col{padding:24px 22px}
+  .col li{font-size:.9rem;padding:10px 0 10px 22px}
+
+  .result-grid{gap:12px}
+  .res-card{padding:22px 20px;gap:14px}
+  .res-ico{flex:0 0 38px;width:38px;height:38px;font-size:1rem}
+  .res-card h3{font-size:1rem}
+  .res-card p{font-size:.86rem}
+
+  .mod{padding:20px 18px}
+  .mod h3{font-size:1rem}
+  .mod p{font-size:.84rem}
+  .mod-n,.mod-c{font-size:.62rem}
+
+  .ctaband{padding:48px 0}
+  .ctaband h3{font-size:1.35rem;margin-bottom:10px}
+  .ctaband p{font-size:.9rem;margin-bottom:20px}
+
+  .steps{grid-template-columns:1fr;gap:22px}
+  .step{padding-top:22px}
+  .step h4{font-size:1rem}
+  .step p{font-size:.85rem}
+  .flow-loop{font-size:.68rem;padding:12px 14px}
+
+  .fit-card{padding:22px 20px}
+  .fit-card h3{font-size:1rem}
+  .fit-card p{font-size:.86rem}
+
+  .d-item{padding:22px 18px}
+  .d-n{font-size:1.8rem}
+  .d-t{font-size:.94rem}
+  .d-d{font-size:.82rem}
+
+  .faq{padding:56px 0}
+  summary{font-size:.96rem;padding:18px 34px 18px 0}
+  details p{font-size:.88rem;padding-bottom:20px}
+
+  .gbox{padding:56px 0}
+  .gbox-inner{padding:32px 22px}
+  .gbox-seal{width:60px;height:60px;font-size:1.2rem;margin-bottom:16px}
+  .gbox p{font-size:.9rem}
+
+  .final{padding:64px 0 92px}
+  .offer{padding:26px 18px}
+  .price-v{font-size:2.4rem}
+  .price-cents{font-size:1.3rem}
+  .price-old{font-size:1rem}
+  .offer-list li{font-size:.9rem;padding:8px 0 8px 22px}
+  .anchor{max-width:100%}
+  .anchor-row{font-size:.82rem;padding:8px 0}
+  .coffee{font-size:1rem}
+  .microcopy{font-size:.66rem}
+  .guar{font-size:.78rem;padding:11px 16px;gap:9px;margin-top:22px}
+
+  footer{padding:26px 0 110px}
+  footer p{font-size:.72rem}
+
+  .stickybar{padding:10px 0}
+  .stickybar .wrap{padding:0 14px;gap:10px}
+  .sb-t{font-size:.8rem}
+  .sb-btn{padding:11px 14px;font-size:.8rem}
+}
+
+@media (max-width:380px){
+  h1{font-size:2rem}
+  .specs{gap:14px 18px}
+  .spec-n{font-size:1.2rem}
+  .price-v{font-size:2.1rem}
+}
+
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="wrap">
+    <nav class="nav">
+      <a href="#" class="logo">TIKTOK SHOP <span>AI MASTER</span></a>
+      <div class="nav-links">
+        <a href="#dentro">O que tem dentro</a>
+        <a href="#metodo">Como funciona</a>
+        <a href="#faq">Dúvidas</a>
+      </div>
+      <a href="#comprar" class="btn btn-ghost" style="padding:11px 20px;font-size:.88rem">Quero agora</a>
+    </nav>
+
+    <div class="hero-grid">
+      <div>
+        <span class="badge">130 prompts · de R$ 27 por R$ 4,99 · acesso imediato</span>
+        <h1>Crie vídeos e imagens<br>para a <span class="hl">TikTok Shop</span><br>usando IA</h1>
+        <p class="lead">
+          Chega de passar horas pensando em ideia, escrevendo roteiro do zero e brigando com o
+          ChatGPT para receber resposta genérica. <strong style="color:#fff">São 130 prompts
+          prontos</strong> que geram roteiros, ganchos, legendas, imagens de produto e briefings
+          de vídeo com IA. É copiar, colar, preencher com os seus dados e usar — tudo por
+          <strong style="color:var(--mint)">R$ 4,99</strong>.
+        </p>
+        <div class="hero-cta">
+          <a href="#comprar" class="btn btn-primary btn-big">Quero por R$ 4,99</a>
+        </div>
+        <div class="tick">
+          <span>ChatGPT · Claude · Nano Banana · IA de vídeo</span>
+          <span>Roda no ChatGPT gratuito</span>
+          <span>Use no primeiro vídeo de hoje</span>
+        </div>
+
+        <div class="specs">
+          <div><span class="spec-n">130</span><span class="spec-l">prompts prontos</span></div>
+          <div><span class="spec-n">11</span><span class="spec-l">módulos</span></div>
+          <div><span class="spec-n">10</span><span class="spec-l">fluxos prontos</span></div>
+          <div><span class="spec-n">281</span><span class="spec-l">páginas</span></div>
+        </div>
+      </div>
+
+      <div class="viewer" id="amostra">
+        <div class="viewer-top">
+          <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+          <span class="viewer-title">exemplos do conteúdo — 3 dos 130 prompts</span>
+        </div>
+        <div class="tabs" role="tablist" aria-label="Amostras de prompts">
+          <button class="tab" role="tab" aria-selected="true" aria-controls="pnl-1" id="tab-1">#002 · produto</button>
+          <button class="tab" role="tab" aria-selected="false" aria-controls="pnl-2" id="tab-2" tabindex="-1">#041 · ganchos</button>
+          <button class="tab" role="tab" aria-selected="false" aria-controls="pnl-3" id="tab-3" tabindex="-1">#082 · imagem</button>
+        </div>
+
+        <div class="panel on" id="pnl-1" role="tabpanel" aria-labelledby="tab-1">
+          <span class="p-num">PROMPT #002</span>
+          <h2 class="p-name">Analisador de Potencial de Produto</h2>
+          <div class="p-meta"><span class="chip">Afiliados</span><span class="chip">Vendedores</span><span class="chip mint">ChatGPT ou Claude</span></div>
+          <pre class="p-code">Atue como um analista de produtos para social commerce,
+especializado em avaliar o potencial de produtos para venda
+através de vídeos curtos.
+
+Vou te passar os dados de um produto real que encontrei na
+TikTok Shop. Analise com base no que eu informar e indique
+claramente o que preciso complementar.
+
+DADOS DO PRODUTO:
+- Produto: [DESCREVA O PRODUTO]
+- Preço: [PREÇO]
+- Comissão: [COMISSÃO EM % OU VALOR]
+- Resumo das avaliações que li: [PONTOS POSITIVOS E NEGATIVOS]
+
+Entregue sua análise no seguinte formato:
+
+1. RESUMO DO PRODUTO (2 frases)
+2. PONTOS FORTES PARA VÍDEO CURTO
+3. PONTOS FRACOS E RISCOS
+4. PÚBLICO PROVÁVEL
+5. FACILIDADE DE DEMONSTRAÇÃO (nota 1 a 5 + justificativa)
+6. RELAÇÃO ESFORÇO × RETORNO
+7. VEREDITO: "VALE TESTAR", "TESTAR COM CAUTELA" ou
+   "PROVAVELMENTE NÃO VALE", com justificativa.</pre>
+          <div class="p-foot"><span class="p-hint">Um dos 11 prompts do módulo de produtos</span><span class="preview-tag">prévia</span></div>
+        </div>
+
+        <div class="panel" id="pnl-2" role="tabpanel" aria-labelledby="tab-2">
+          <span class="p-num">PROMPT #041</span>
+          <h2 class="p-name">Hooks de Problema</h2>
+          <div class="p-meta"><span class="chip">Criadores</span><span class="chip">Faceless</span><span class="chip mint">ChatGPT</span></div>
+          <pre class="p-code">Atue como um copywriter especializado em ganchos de
+identificação de dor para vídeo curto. O mecanismo: espelhar
+a experiência do espectador com tanta precisão que ele pensa
+"isso sou eu" antes do segundo 3.
+
+A precisão vem do CONCRETO. "Cansada da bagunça" não espelha
+ninguém; "a gaveta que você empurra com o joelho para fechar"
+espelha.
+
+CONTEXTO:
+- Produto: [PRODUTO]
+- Dores mapeadas: [COLE O RANKING]
+- Público: [PÚBLICO]
+
+Gere 15 ganchos usando estas 5 fórmulas (3 de cada):
+
+1. FLAGRANTE: o momento exato da dor em detalhe cênico
+2. SEGUNDA PESSOA: interpelar direto
+3. CONFISSÃO: assumir a dor em primeira pessoa
+4. FREQUÊNCIA: expor a repetição da dor
+5. CUSTO INVISÍVEL: o que a dor rouba sem a pessoa perceber
+
+Depois:
+PAR PERFEITO: para os 3 melhores, descreva a imagem que deve
+estar na tela enquanto o gancho é dito.</pre>
+          <div class="p-foot"><span class="p-hint">Um dos 16 prompts de ganchos</span><span class="preview-tag">prévia</span></div>
+        </div>
+
+        <div class="panel" id="pnl-3" role="tabpanel" aria-labelledby="tab-3">
+          <span class="p-num">PROMPT #082</span>
+          <h2 class="p-name">Foto Profissional de Produto</h2>
+          <div class="p-meta"><span class="chip">Vendedores</span><span class="chip">Afiliados</span><span class="chip mint">Nano Banana</span></div>
+          <pre class="p-code">[anexe a foto real do seu produto junto com este texto]
+
+Transforme a foto anexada em uma fotografia profissional de
+estúdio deste produto.
+
+CENA: produto sobre superfície [BRANCA LISA / CINZA NEUTRA],
+fundo infinito da mesma cor, sem nenhum outro objeto na cena.
+Iluminação de estúdio suave e difusa vinda de cima e da
+lateral, com sombra suave e natural na base do produto.
+Produto em foco nítido total, ângulo [FRONTAL / 3-4 ELEVADO],
+ocupando cerca de 70–80% do quadro, centralizado.
+
+FORMATO: [1:1 / 9:16], alta resolução, estética de fotografia
+de e-commerce premium — limpa, realista, sem filtros.
+
+USE A IMAGEM ANEXADA COMO REFERÊNCIA ABSOLUTA DO PRODUTO.
+Preserve com fidelidade total: formato e proporções, cores
+reais, textura e material, logotipo e todos os textos do
+rótulo (idênticos e legíveis), embalagem e acabamento.
+NÃO deforme o produto, NÃO mude cores, NÃO adicione ou remova
+partes, NÃO reescreva textos.</pre>
+          <div class="p-foot"><span class="p-hint">Um dos 11 prompts de imagem com IA</span><span class="preview-tag">prévia</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="proof">
+  <div class="wrap">
+    <div class="proof-grid">
+      <div class="rv"><div class="proof-n">130</div><div class="proof-l">prompts prontos para copiar e colar</div></div>
+      <div class="rv"><div class="proof-n">4</div><div class="proof-l">IAs cobertas: ChatGPT, Claude, Nano Banana e vídeo</div></div>
+      <div class="rv"><div class="proof-n">11</div><div class="proof-l">módulos, do produto ao vídeo publicado</div></div>
+      <div class="rv"><div class="proof-n">R$ 4,99</div><div class="proof-l">pagamento único, sem mensalidade</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="pain">
+  <div class="wrap">
+    <div class="rv" style="max-width:56ch">
+      <span class="eyebrow dark">Você já sentiu isso</span>
+      <h2>Criar conteúdo sozinho<br>consome tempo demais</h2>
+      <p class="lead" style="margin-top:16px">
+        Ideia, roteiro, gancho, imagem, legenda — cada peça leva tempo, e a IA que devia ajudar
+        só devolve resposta genérica. No fim do dia, você produziu um vídeo e se esgotou.
+      </p>
+    </div>
+    <div class="pain-grid">
+      <div class="pain-card rv"><div class="pain-q">Você pede ideia ao ChatGPT e vem tudo genérico</div><p class="pain-a">"Me dá ideias de vídeo" devolve o óbvio que todo mundo já postou. O problema não é a IA. É o pedido.</p></div>
+      <div class="pain-card rv"><div class="pain-q">Trava para escrever o roteiro do zero</div><p class="pain-a">Olha pra tela em branco sem saber por onde começar, e quando escreve, some a energia de gravar.</p></div>
+      <div class="pain-card rv"><div class="pain-q">Empaca nos 3 primeiros segundos do vídeo</div><p class="pain-a">É ali que a pessoa decide se assiste ou rola. Um gancho fraco derruba um vídeo bom — e é o que mais dá trabalho de pensar.</p></div>
+      <div class="pain-card rv"><div class="pain-q">Suas fotos de produto parecem amadoras</div><p class="pain-a">Foto da pia da cozinha disputando com anúncio de estúdio. E você não sabe como usar IA para deixá-la profissional.</p></div>
+      <div class="pain-card rv"><div class="pain-q">Ouve falar de IA de imagem e vídeo, mas trava na prática</div><p class="pain-a">Nano Banana, Kling, Sora… todo mundo cita, e você não sabe o que escrever para a ferramenta obedecer.</p></div>
+      <div class="pain-card rv"><div class="pain-q">Não quer aparecer e acha que isso te trava</div><p class="pain-a">Sem rosto, sem ideia de como produzir. Quando existe um caminho inteiro de conteúdo faceless com IA.</p></div>
+    </div>
+    <div class="pain-turn rv">
+      <p>Cada uma dessas etapas tem um prompt pronto esperando por você — testado, detalhado e feito para a IA obedecer.</p>
+    </div>
+  </div>
+</section>
+
+<section class="shift">
+  <div class="wrap">
+    <div class="rv" style="max-width:56ch">
+      <span class="eyebrow">A virada</span>
+      <h2>Da tela em branco<br>ao conteúdo pronto com IA</h2>
+      <p class="lead" style="margin-top:16px">
+        A diferença entre quem produz devagar e quem produz em série não é talento nem ferramenta
+        cara. É saber exatamente o que pedir para a IA — e ter esse pedido pronto para colar.
+      </p>
+    </div>
+    <div class="shift-grid">
+      <div class="col before rv">
+        <span class="col-tag">Sem os prompts</span>
+        <ul>
+          <li>Roteiro escrito do zero, do começo ao fim</li>
+          <li>ChatGPT devolvendo ideia genérica e sem uso</li>
+          <li>Um gancho por vídeo, sempre o mesmo</li>
+          <li>Foto amadora e sem saber melhorar com IA</li>
+          <li>IA de imagem e vídeo que você não domina</li>
+          <li>Legenda escrita com pressa, sem gancho</li>
+          <li>Uma semana inteira para juntar 5 vídeos</li>
+        </ul>
+      </div>
+      <div class="col after rv">
+        <span class="col-tag">Com os 130 prompts</span>
+        <ul>
+          <li>Roteiro em tabela, é só ler e gravar</li>
+          <li>Ideias específicas para o seu produto e público</li>
+          <li>50 ganchos gerados de uma vez</li>
+          <li>Foto de estúdio feita da sua própria foto</li>
+          <li>Briefings prontos para Nano Banana, Kling e Sora</li>
+          <li>Legenda com primeira linha que segura</li>
+          <li>Um mês de conteúdo pronto em uma tarde</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="result">
+  <div class="wrap">
+    <div class="rv" style="max-width:56ch">
+      <span class="eyebrow dark">O que você consegue fazer</span>
+      <h2>Tudo o que sai de dentro dos prompts</h2>
+      <p class="lead" style="margin-top:14px;color:var(--slate-dark)">
+        Não são frases soltas. Cada prompt entrega uma peça pronta do seu conteúdo.
+      </p>
+    </div>
+    <div class="result-grid">
+      <div class="res-card rv"><div class="res-ico">R</div><div><h3>Roteiros prontos para gravar</h3><p>De 15, 30 e 60 segundos, em tabela: o que aparece na tela, o que falar e o texto de cada momento.</p></div></div>
+      <div class="res-card rv"><div class="res-ico">G</div><div><h3>Ganchos que seguram nos 3 segundos</h3><p>Dez mecanismos diferentes de captura de atenção — gere dezenas de uma vez e escolha o melhor.</p></div></div>
+      <div class="res-card rv"><div class="res-ico">F</div><div><h3>Fotos de produto profissionais</h3><p>Sua foto de celular vira imagem de estúdio, cena de uso e card de vitrine, sem contratar fotógrafo.</p></div></div>
+      <div class="res-card rv"><div class="res-ico">V</div><div><h3>Vídeos com IA</h3><p>Briefings prontos para Nano Banana, Kling, Sora e similares — anime sua imagem e monte o vídeo.</p></div></div>
+      <div class="res-card rv"><div class="res-ico">L</div><div><h3>Legendas e CTAs que convertem</h3><p>Primeira linha que segura, descrição na medida e chamada que leva ao link, sem escrever do zero.</p></div></div>
+      <div class="res-card rv"><div class="res-ico">S</div><div><h3>Conteúdo sem aparecer</h3><p>Um caminho completo de produção faceless: mãos e produto, POV, narração e texto na tela.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="modules" id="dentro">
+  <div class="wrap">
+    <div class="mod-head rv">
+      <span class="eyebrow">O que tem dentro</span>
+      <h2>11 módulos, do produto ao vídeo publicado</h2>
+      <p class="lead" style="margin-top:18px">
+        Cada prompt vem com objetivo, para quem serve, o que você precisa preencher,
+        exemplo pronto e em qual IA ele funciona melhor. É abrir e usar.
+      </p>
+    </div>
+    <div class="mod-grid">
+      <div class="mod rv"><div class="mod-top"><span class="mod-n">MÓDULO 01</span><span class="mod-c">11 prompts</span></div><h3>Encontrando produtos</h3><p>Descubra quais produtos rendem vídeo antes de perder tempo com eles — e transforme avaliações de clientes em munição de conteúdo.</p></div>
+      <div class="mod rv"><div class="mod-top"><span class="mod-n">MÓDULO 02</span><span class="mod-c">11 prompts</span></div><h3>Estratégia</h3><p>Nicho, público, posicionamento e rotina de publicação. Inclui o plano dos 14 primeiros dias para quem está começando do zero.</p></div>
+      <div class="mod rv"><div class="mod-top"><span class="mod-n">MÓDULO 03</span><span class="mod-c">16 prompts</span></div><h3>Conteúdo que vende</h3><p>Demonstração, review, unboxing, antes e depois, comparativo, storytelling, UGC, listas e séries — cada formato com seu prompt.</p></div>
+      <div class="mod rv"><div class="mod-top"><span class="mod-n">MÓDULO 04</span><span class="mod-c">16 prompts</span></div><h3>Ganchos e retenção</h3><p>Dez mecanismos diferentes de capturar atenção e o passo a passo dos 3 primeiros segundos que seguram o dedo na tela.</p></div>
+      <div class="mod rv"><div class="mod-top"><span class="mod-n">MÓDULO 05</span><span class="mod-c">16 prompts</span></div><h3>Roteiros prontos</h3><p>De 15, 30 e 60 segundos em tabela de produção: tempo, o que aparece, o que falar, texto na tela e como gravar.</p></div>
+      <div class="mod rv"><div class="mod-top"><span class="mod-n">MÓDULO 06</span><span class="mod-c">11 prompts</span></div><h3>Copy e conversão</h3><p>CTAs, legendas, argumentos de venda, quebra de objeções e o manual de respostas para os comentários que trazem o clique.</p></div>
+      <div class="mod rv"><div class="mod-top"><span class="mod-n">MÓDULO 07</span><span class="mod-c">11 prompts</span></div><h3>Imagens com IA</h3><p>Sua foto de celular vira foto de estúdio, cena de uso, criativo e card de vitrine — mantendo seu produto igualzinho.</p></div>
+      <div class="mod rv"><div class="mod-top"><span class="mod-n">MÓDULO 08</span><span class="mod-c">11 prompts</span></div><h3>Vídeos com IA</h3><p>Briefings prontos para Kling, Veo, Runway, Sora e similares. Anime sua imagem e monte o vídeo sem sair de casa.</p></div>
+      <div class="mod rv"><div class="mod-top"><span class="mod-n">MÓDULO 09</span><span class="mod-c">11 prompts</span></div><h3>Conteúdo sem aparecer</h3><p>Produção completa faceless: mãos e produto, POV, narração, b-roll próprio, texto na tela e voz artificial.</p></div>
+      <div class="mod rv"><div class="mod-top"><span class="mod-n">MÓDULO 10</span><span class="mod-c">11 prompts</span></div><h3>Análise e otimização</h3><p>Cole seus números e descubra o que consertar: o gancho, o meio do vídeo ou o CTA. Depois multiplique o que deu certo.</p></div>
+      <div class="mod rv"><div class="mod-top"><span class="mod-n">MÓDULO 11</span><span class="mod-c">5 prompts</span></div><h3>Prompts Master</h3><p>Coloque um produto e receba o pacote inteiro: análise, 10 ângulos, 20 ganchos, 15 roteiros, legendas e plano de 30 dias.</p></div>
+      <div class="mod rv" style="background:linear-gradient(160deg,rgba(242,179,61,.14),rgba(242,179,61,.04));border-color:rgba(242,179,61,.4)"><div class="mod-top"><span class="mod-n" style="color:var(--gold)">BÔNUS</span><span class="mod-c">4 seções</span></div><h3>Fluxos e checklists</h3><p>10 receitas prontas combinando prompts em ordem, tabela de ferramentas e o checklist final para não esquecer nenhuma etapa.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="ctaband">
+  <div class="wrap rv">
+    <h3>130 prompts, 11 módulos, um preço que cabe no bolso</h3>
+    <p>Você levaria semanas para montar isso sozinho. Está tudo pronto, organizado e esperando você usar.</p>
+    <a href="#comprar" class="btn btn-primary btn-big">Quero por R$ 4,99</a>
+    <span class="price-inline">pagamento único · acesso imediato no seu e-mail</span>
+  </div>
+</section>
+
+<section class="flow" id="metodo">
+  <div class="wrap">
+    <div class="flow-head rv">
+      <span class="eyebrow">Como funciona</span>
+      <h2>Um caminho pronto, do começo ao fim</h2>
+      <p class="lead" style="margin-top:16px">
+        Você não precisa adivinhar o que fazer primeiro. Os prompts se encaixam em sequência —
+        o resultado de um vira a entrada do próximo.
+      </p>
+    </div>
+    <div class="steps">
+      <div class="step rv"><span class="step-n">01</span><h4>Produto</h4><p>Encontre e analise em minutos, com critério.</p></div>
+      <div class="step rv"><span class="step-n">02</span><h4>Público</h4><p>Dores, desejos e a linguagem de quem compra.</p></div>
+      <div class="step rv"><span class="step-n">03</span><h4>Ângulo</h4><p>O motivo pelo qual alguém para no seu vídeo.</p></div>
+      <div class="step rv"><span class="step-n">04</span><h4>Roteiro</h4><p>Gancho, prova e CTA prontos para gravar.</p></div>
+      <div class="step rv"><span class="step-n">05</span><h4>Produção</h4><p>Imagem e vídeo, gravados ou gerados com IA.</p></div>
+      <div class="step rv"><span class="step-n">06</span><h4>Análise</h4><p>Descubra o que melhorar e repita o que funcionou.</p></div>
+    </div>
+    <div class="rv"><span class="flow-loop">→ e o ciclo recomeça, cada vez mais rápido</span></div>
+  </div>
+</section>
+
+<section class="fit">
+  <div class="wrap">
+    <div class="rv" style="max-width:56ch">
+      <span class="eyebrow dark">Feito para você</span>
+      <h2>Três perfis que começam a usar hoje mesmo</h2>
+    </div>
+    <div class="fit-grid">
+      <div class="fit-card rv"><h3>Afiliado</h3><p>Escolha produtos com comissão que valha a pena, gere 30 ideias de vídeo para cada um e tenha roteiro pronto toda vez que sentar para gravar.</p></div>
+      <div class="fit-card rv"><h3>Criador de conteúdo</h3><p>Ganchos, roteiros, legendas e séries inteiras estruturadas. Poste todo dia sem passar a tarde travado pensando no que fazer.</p></div>
+      <div class="fit-card rv"><h3>Vendedor</h3><p>Descrições que tiram a dúvida do comprador, títulos de vitrine que puxam clique e fotos profissionais sem contratar fotógrafo.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="ctaband">
+  <div class="wrap rv">
+    <h3>Se você se reconheceu, este material é para você</h3>
+    <p>Por menos que um café, você começa a produzir com IA ainda hoje — sem curso longo, sem enrolação.</p>
+    <a href="#comprar" class="btn btn-primary btn-big">Garantir por R$ 4,99</a>
+    <span class="price-inline">130 prompts no seu e-mail em segundos</span>
+  </div>
+</section>
+
+<section class="deliver">
+  <div class="wrap">
+    <div class="rv" style="max-width:56ch">
+      <span class="eyebrow">O que você recebe</span>
+      <h2>Tudo em um PDF, por R$ 4,99</h2>
+      <p class="lead" style="margin-top:14px">
+        São 130 prompts por menos de 4 centavos cada. Um só já economiza mais tempo do que o
+        material inteiro custa.
+      </p>
+    </div>
+    <div class="d-grid">
+      <div class="d-item rv"><div class="d-n">130</div><div class="d-t">Prompts completos</div><div class="d-d">Com objetivo, campos para preencher, exemplo pronto e a IA indicada em cada um.</div></div>
+      <div class="d-item rv"><div class="d-n">281</div><div class="d-t">Páginas organizadas</div><div class="d-d">Cada prompt em sua própria página. Abre no celular, tablet ou computador.</div></div>
+      <div class="d-item rv"><div class="d-n">10</div><div class="d-t">Fluxos prontos</div><div class="d-d">Receitas em ordem: do produto ao primeiro vídeo, escalar um vencedor e mais 8.</div></div>
+      <div class="d-item rv"><div class="d-n">04</div><div class="d-t">IAs cobertas</div><div class="d-d">ChatGPT, Claude, Nano Banana e ferramentas de vídeo, indicadas prompt a prompt.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <div class="wrap">
+    <div class="rv" style="max-width:52ch">
+      <span class="eyebrow">Dúvidas rápidas</span>
+      <h2>Antes de você perguntar</h2>
+    </div>
+    <div class="faq-list rv">
+      <details open><summary>Nunca vendi nada. Consigo começar com isso?</summary><p>Sim — o material foi feito pensando em quem está começando. Tem o plano dos 14 primeiros dias, prompts para escolher o produto certo antes de gravar e roteiros feitos para quem ainda trava na frente da câmera. Você começa pelo primeiro fluxo e vai até publicar o vídeo.</p></details>
+      <details><summary>Preciso pagar ChatGPT ou Claude para usar?</summary><p>Não. A maior parte dos prompts funciona nas versões gratuitas. Para os prompts mais longos e para imagem e vídeo, o material indica alternativas para cada ferramenta.</p></details>
+      <details><summary>Sou iniciante. Consigo usar?</summary><p>Sim. Todo prompt vem com exemplo de preenchimento e passo a passo. Tem até um plano específico para os 14 primeiros dias e roteiros feitos para quem trava na frente da câmera.</p></details>
+      <details><summary>Preciso aparecer nos vídeos?</summary><p>Não. Um módulo inteiro com 11 prompts é dedicado a conteúdo sem rosto, e os outros módulos indicam como adaptar tudo para quem não aparece.</p></details>
+      <details><summary>Como uso os prompts na prática?</summary><p>Copia, cola no ChatGPT ou na IA indicada, preenche os campos entre colchetes com os seus dados e envia. A resposta vem pronta para usar.</p></details>
+      <details><summary>Serve para qualquer nicho?</summary><p>Sim. Os prompts pedem o seu nicho, produto e público como informação — funcionam para casa, beleza, pets, cozinha, tecnologia e qualquer outra categoria.</p></details>
+      <details><summary>Como recebo o material?</summary><p><span class="edit" title="Editar: descreva seu processo real de entrega">Assim que o pagamento é confirmado, o link de download do PDF chega no seu e-mail. Acesso imediato.</span></p></details>
+      <details><summary>E se eu não gostar?</summary><p><span class="edit" title="Editar: informe sua política real de reembolso">Você tem 7 dias para pedir reembolso, sem precisar justificar.</span></p></details>
+    </div>
+  </div>
+</section>
+
+<section class="gbox">
+  <div class="wrap">
+    <div class="gbox-inner rv">
+      <div class="gbox-seal">7</div>
+      <h2>Risco zero para você</h2>
+      <p class="edit" title="Editar: confirme sua política real de reembolso">
+        Você tem 7 dias de garantia. Baixa, usa os prompts, testa no seu conteúdo — e se por
+        qualquer motivo não for para você, é só pedir o reembolso. Sem burocracia, sem pergunta.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="final" id="comprar">
+  <div class="wrap final-inner">
+    <div class="rv">
+      <span class="eyebrow">Comece hoje</span>
+      <h2>Seu próximo vídeo pode<br>sair ainda hoje</h2>
+      <p class="lead">
+        Você não precisa aprender a escrever prompt, nem virar especialista em IA. Já está tudo
+        pronto: é escolher o prompt, colar na ferramenta, preencher com os seus dados e usar o
+        resultado. Baixe agora e produza seu primeiro conteúdo hoje.
+      </p>
+
+      <div class="offer">
+        <span class="price-pill">Menos que um cafezinho</span>
+        <p class="coffee">São <b>130 prompts, 281 páginas e 10 fluxos prontos</b> por menos do que você gasta num café na padaria.</p>
+
+        <div class="anchor">
+          <div class="anchor-row"><span>1 hora de um freelancer de conteúdo</span><span>R$ 80,00</span></div>
+          <div class="anchor-row"><span>1 pacote de prompts avulso na internet</span><span>R$ 37,00</span></div>
+          <div class="anchor-row"><span>1 café na padaria</span><span>R$ 7,00</span></div>
+          <div class="anchor-row win"><span>TikTok Shop AI Master — 130 prompts</span><span>R$ 4,99</span></div>
+        </div>
+
+        <ul class="offer-list">
+          <li>130 prompts prontos, em 11 módulos</li>
+          <li>PDF com 281 páginas para download</li>
+          <li>10 fluxos práticos passo a passo</li>
+          <li>Módulo completo de conteúdo sem aparecer</li>
+          <li>Prompts de imagem e vídeo com IA</li>
+          <li>Checklist final para não esquecer nada</li>
+        </ul>
+
+        <span class="save-badge">Você economiza mais de 80%</span>
+        <span class="price-l">De R$ 27,00 por apenas</span>
+        <span class="price-old">R$ 27,00</span>
+        <span class="price-v">R$ 4<span class="price-cents">,99</span></span>
+        <span class="price-l edit" title="Editar: condições reais — pagamento único, sem mensalidade">pagamento único · sem mensalidade · acesso imediato</span>
+        <div style="margin-top:28px">
+          <a href="#" class="btn btn-primary btn-big edit" title="Editar: link do seu checkout" style="width:100%;max-width:420px">Quero por R$ 4,99</a>
+        </div>
+        <p class="microcopy">
+          Pagou, baixou, começou. O PDF cai no seu e-mail em segundos.<br>
+          Um único prompt já paga o valor do material no tempo que você economiza.
+        </p>
+        <div class="guar edit" title="Editar: sua política real de garantia">
+          <strong>7 dias</strong> de garantia — testa e, se não for para você, devolvemos.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>
+      TikTok Shop AI Master · <span class="edit" title="Editar: seu nome ou empresa e CNPJ">Seu nome ou empresa</span> ·
+      <span class="edit" title="Editar: seus links">Termos de uso</span> ·
+      <span class="edit" title="Editar: seus links">Política de privacidade</span> ·
+      <span class="edit" title="Editar: seu contato">contato@seudominio.com</span>
+    </p>
+    <p style="color:#4E5772">
+      Material educativo sobre uso de ferramentas de inteligência artificial. Os resultados variam
+      conforme o produto, o mercado, a dedicação e a execução de cada pessoa. Produto independente,
+      sem vínculo ou afiliação com TikTok, ByteDance, OpenAI, Anthropic ou Google.
+    </p>
+  </div>
+</footer>
+
+<div class="stickybar" id="stickybar">
+  <div class="wrap">
+    <div class="sb-info">
+      <span class="sb-t">TikTok Shop AI Master — 130 prompts</span>
+      <span class="sb-p sb-sub"><span style="text-decoration:line-through;opacity:.6">R$ 27</span> R$ 4,99 · pagamento único · acesso imediato</span>
+    </div>
+    <a href="#comprar" class="btn btn-primary sb-btn">Quero por R$ 4,99</a>
+  </div>
+</div>
+
+<script>
+const tabs = Array.from(document.querySelectorAll('.tab'));
+const panels = Array.from(document.querySelectorAll('.panel'));
+function select(i){
+  tabs.forEach((t,j)=>{
+    const on = i===j;
+    t.setAttribute('aria-selected', on);
+    t.tabIndex = on ? 0 : -1;
+    panels[j].classList.toggle('on', on);
+  });
+}
+tabs.forEach((t,i)=>{
+  t.addEventListener('click', ()=>select(i));
+  t.addEventListener('keydown', e=>{
+    if(e.key==='ArrowRight'||e.key==='ArrowLeft'){
+      e.preventDefault();
+      const n=(i+(e.key==='ArrowRight'?1:-1)+tabs.length)%tabs.length;
+      select(n); tabs[n].focus();
+    }
+  });
+});
+const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+// barra fixa aparece depois do hero
+const sticky = document.getElementById('stickybar');
+const heroEl = document.querySelector('.hero');
+if(sticky && heroEl && 'IntersectionObserver' in window){
+  const so = new IntersectionObserver(es=>{
+    es.forEach(en=> sticky.classList.toggle('show', !en.isIntersecting));
+  }, {threshold:0});
+  so.observe(heroEl);
+}
+if(!reduce && 'IntersectionObserver' in window){
+  const io = new IntersectionObserver(es=>{
+    es.forEach((en,k)=>{
+      if(en.isIntersecting){
+        en.target.style.transitionDelay = Math.min(k*55,240)+'ms';
+        en.target.classList.add('in');
+        io.unobserve(en.target);
+      }
+    });
+  },{threshold:.12, rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+}else{
+  document.querySelectorAll('.rv').forEach(el=>el.classList.add('in'));
+}
+</script>
+</body>
+</html>
